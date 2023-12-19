@@ -12,6 +12,7 @@ FILE="/tmp/passwd" # This is the Source directory
 if [ ! -d $FILE ] # ! - denotes opposite of 
 then
     echo -e "$R ERROR:: The $FILE is not available"
+    exit 1
 fi
 
 while IFS=":" read -r username password user_id user_fullname home_dir shell_path
