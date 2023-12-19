@@ -13,7 +13,7 @@ do
     if [ $usage -gt $DISK_USAGE ]
     then 
         message+="High Disk Usage on $partition: $usage"
-    if
+    fi
 done <<< $DISK_USAGE
 
 echo "message: $message"
