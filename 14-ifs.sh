@@ -7,11 +7,11 @@ G="\e[32m" # Green colour
 Y="\e[33m" # Yellow colour
 N="\e[0m" # No colour
 
-FILE=/etc/passwd # This is the Source directory
+file=/etc/passwd # This is the Source directory
 
-if [ ! -d $FILE ] # ! - denotes opposite of 
+if [ ! -f $file ] # ! - denotes opposite 
 then
-    echo -e "$R ERROR:: The $FILE is not available"
+    echo -e "$R ERROR:: The $file is not available"
     exit 1
 fi
 
