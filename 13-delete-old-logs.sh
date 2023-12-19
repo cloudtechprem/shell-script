@@ -16,7 +16,7 @@ fi
 
 FILES_TO_DELETE=$(find $SOURCE_DIR -type f -mtime +14 -name "*.log") # f : find, -mtime : days old, -name : files names
 
-while IFS= read -r lines
+while IFS= read -r line
 do
     echo "Deleting files: $line"
 done <<< $FILES_TO_DELETE # We are requesting output of Files to Delete to read in line by line
