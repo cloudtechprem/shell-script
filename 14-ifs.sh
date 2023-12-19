@@ -7,7 +7,7 @@ G="\e[32m" # Green colour
 Y="\e[33m" # Yellow colour
 N="\e[0m" # No colour
 
-FILE="/etc/passwd" # This is the Source directory
+FILE=/etc/passwd # This is the Source directory
 
 if [ ! -d $FILE ] # ! - denotes opposite of 
 then
