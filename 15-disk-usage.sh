@@ -9,7 +9,7 @@ message=""
 while IFS= read line
 do
     usage=$(echo $line | awk '{print $6F}' | cut -d % -f1) # using awk command to get the 6th fragment in grep -vE 'tmp|File' and cut command to remove the percentage
-    partition=$(echo $line awk '{print $1F}')
+    partition=$(echo $line | awk '{print $1F}')
     if [ $usage -gt $DISK_THRESHOLD ]
     then 
         message+="High Disk Usage on $partition: $usage\n"
